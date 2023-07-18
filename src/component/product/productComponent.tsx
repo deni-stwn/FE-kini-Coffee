@@ -31,7 +31,7 @@ export const ProductComponent: React.FC<PropsProduct> = ({
               message
             )}`}
             ButtonStyle={
-              "text-sm md:text-lg lg:text-2xl flex justify-center w-full text-white bg-[#222222] font-PlayfairDisplay px-2 py-2"
+              "text-sm md:text-lg lg:text-2xl flex justify-center w-full text-white bg-[#222222] font-PlayfairDisplay px-2 py-1 xl:py-2"
             }
           >
             Order Now

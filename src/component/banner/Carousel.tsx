@@ -41,8 +41,8 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
   return (
     <>
       <Slider {...settings} dots={dots} className="dots w-full h-screen">
-        {data?.map((item) => (
-          <div className="h-screen w-full">
+        {data?.map((item, index) => (
+          <div className="h-screen w-full" key={index}>
             <img
               key={item.id}
               src={`${item.url}`}
@@ -57,5 +57,3 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
 };
 
 export default Carousel;
-//  md:h-[651px] dots
-//  md:w-[1040px] md:h-[550px] img

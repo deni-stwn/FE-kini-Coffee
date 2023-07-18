@@ -46,13 +46,12 @@ const AnotherArticle: React.FC = () => {
   );
 
   const randomArticles = getRandomArticles(filteredArtikelList, 3);
-  console.log(data);
 
   return (
     <div className="mt-16 md:mt-[139px]  md:w-full">
       <Title title={"Cerita Lainnya"} />
-      <div className="flex mx-5 md:mx-14 gap-12 justify-evenly flex-wrap lg:flex-nowrap">
-        {randomArticles.map((article: ArticleInterface) => {
+      <div className="flex mx-5 md:mx-14  gap-12 justify-evenly flex-wrap lg:flex-nowrap">
+        {randomArticles.map((article: ArticleInterface, index) => {
           const htmlContent = article.content;
           const parser = new DOMParser();
           const doc = parser.parseFromString(htmlContent, "text/html");
@@ -71,9 +70,11 @@ const AnotherArticle: React.FC = () => {
             : "";
 
           return loading ? (
-            <PlaceholderAnotherArticle />
+            <div key={index}>
+              <PlaceholderAnotherArticle />
+            </div>
           ) : (
-            <div className="article-item md:w-[360px] md:h-[507px]">
+            <div key={index} className="article-item md:w-[360px] md:h-[507px]">
               {imageSrc && (
                 <img
                   src={imageSrc}
