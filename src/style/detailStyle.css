@@ -1,0 +1,25 @@
+.other-images {
+  margin: 12px 0;
+}
+
+.first-image {
+  width: 715px;
+  height: 466px;
+  object-fit: cover;
+}
+
+.list-other-img {
+  display: flex;
+  gap: 12px;
+}
+
+@media screen and (max-width: 560px) {
+  p {
+    font-size: 14px;
+  }
+  .first-image {
+    height: 266px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
