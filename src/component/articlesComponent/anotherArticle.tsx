@@ -10,7 +10,7 @@ import { getRandomArticles } from "../../util/getRandomArticle";
 import PlaceholderAnotherArticle from "./placeholder/placeholderAnotherArticle";
 
 const AnotherArticle: React.FC = () => {
-  const { articleTitle } = useParams();
+  const { title } = useParams<{ title: string }>();
   const [data, setData] = useState<ArticleInterface[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -39,10 +39,10 @@ const AnotherArticle: React.FC = () => {
 
   if (error) return <div></div>;
 
-  const decodedTitle = articleTitle?.replace(/-/g, " ");
+  const decodedTitle = title?.replace(/-/g, " ");
 
   const filteredArtikelList = data.filter(
-    (artikel) => artikel.title !== decodedTitle
+    (artikel) => artikel.title != decodedTitle
   );
 
   const randomArticles = getRandomArticles(filteredArtikelList, 3);

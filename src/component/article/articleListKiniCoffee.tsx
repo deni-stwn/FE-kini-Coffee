@@ -48,7 +48,7 @@ const ArticleListKiniCoffee: React.FC<articleProps> = ({
               key={article.id}
             >
               {imageSrc && (
-                <div className="w-full md:w-[80%] lg:w-[50%]">
+                <div className="w-full md:max-w-[240px] lg:max-w-[280px]">
                   <img
                     src={imageSrc}
                     alt="Article"
