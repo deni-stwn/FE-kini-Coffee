@@ -2,6 +2,17 @@ export const parseHTML = (htmlContent: string) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlContent, "text/html");
   const images = doc.querySelectorAll("img");
+  const p = doc.querySelectorAll("p");
+  const h1 = doc.querySelector("h1");
+
+  h1?.classList.add("font-PlayfairDisplay");
+
+  p.forEach((paragraph, index) => {
+    paragraph.classList.add("font-inter");
+    paragraph.classList.add("text-sm");
+    paragraph.classList.add("md:text-base");
+    paragraph.classList.add("text-[#888888]");
+  });
 
   // Create a container div for other images
   const otherImagesContainer = doc.createElement("div");

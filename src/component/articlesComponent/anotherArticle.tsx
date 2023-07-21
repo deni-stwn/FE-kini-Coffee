@@ -42,14 +42,14 @@ const AnotherArticle: React.FC = () => {
   const decodedTitle = title?.replace(/-/g, " ");
 
   const filteredArtikelList = data.filter(
-    (artikel) => artikel.title != decodedTitle
+    (artikel) => artikel.title !== decodedTitle
   );
 
   const randomArticles = getRandomArticles(filteredArtikelList, 3);
 
   return (
     <div className="mt-16 md:mt-[139px]  md:w-full">
-      <Title title={"Cerita Lainnya"} />
+      <Title title={"Artikel Lainnya"} />
       <div className="flex mx-5 md:mx-14  gap-12 justify-evenly flex-wrap lg:flex-nowrap">
         {randomArticles.map((article: ArticleInterface, index) => {
           const htmlContent = article.content;
