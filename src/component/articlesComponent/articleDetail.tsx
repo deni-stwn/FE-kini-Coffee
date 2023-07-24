@@ -41,8 +41,6 @@ const DetailArticle = () => {
 
   const htmlContent = parseHTML(article?.content);
 
-  console.log(htmlContent);
-
   return (
     <>
       <Nav navbarClass={""} />

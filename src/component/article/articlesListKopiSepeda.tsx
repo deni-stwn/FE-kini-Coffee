@@ -19,7 +19,7 @@ const ArticlesListKopiSepeda: React.FC<articleProps> = ({
   return (
     <div className="lg:-mt-36 mt-20 md:w-full">
       <Title title={"Cerita Kita"} />
-      <div className="flex justify-around flex-wrap gap-24">
+      <div className="flex justify-around flex-wrap gap-24 mx-7 md:mx-6 xl:mx-24">
         {data?.map((article) => {
           const htmlContent = article.content;
           const parser = new DOMParser();
@@ -44,7 +44,7 @@ const ArticlesListKopiSepeda: React.FC<articleProps> = ({
             </div>
           ) : (
             <div
-              className="article-item md:w-[460px] md:h-[507px] mx-8 font-inter"
+              className="article-item md:w-[460px] md:h-[507px] font-inter"
               key={article.id}
             >
               {imageSrc && (

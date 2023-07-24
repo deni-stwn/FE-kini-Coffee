@@ -7,7 +7,7 @@ import logo from "../../assets/story-img/img-story-logo.svg";
 const BannerKopiSepeda = () => {
   return (
     <div className="mt-24 md:mt-[139px] md:w-full">
-      <div className="grid grid-cols-6 mx-10 gap-2 lg:grid-rows-3 lg:gap-5 lg:mx-20 lg:grid-flow-col">
+      <div className="grid grid-cols-6 gap-2 lg:grid-rows-3 lg:gap-5 mx-7 md:mx-10 lg:mx-14 xl:mx-24 lg:grid-flow-col">
         <div className="col-start-1 col-span-3 row-span-1 lg:col-start-1 lg:col-span-2 ">
           <img src={img1} alt="kopi" className="w-full" />
         </div>
