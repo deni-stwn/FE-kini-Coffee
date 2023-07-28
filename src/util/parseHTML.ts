@@ -4,6 +4,11 @@ export const parseHTML = (htmlContent: string) => {
   const images = doc.querySelectorAll("img");
   const p = doc.querySelectorAll("p");
   const h1 = doc.querySelector("h1");
+  const span = doc.querySelectorAll("span");
+
+  span.forEach((span, i) => {
+    span.style.fontFamily = "";
+  });
 
   h1?.classList.add("font-PlayfairDisplay");
 
